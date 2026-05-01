@@ -3,80 +3,119 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cloud Architect Portfolio</title>
+<title>Piyush Yadav | Cloud Architect</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: 'Poppins', sans-serif;
-  background: #0f172a;
+  background: linear-gradient(135deg, #020617, #0f172a);
   color: #fff;
 }
 
+/* HEADER */
 header {
-  padding: 20px 50px;
   display: flex;
   justify-content: space-between;
-  background: #020617;
+  padding: 20px 50px;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
 }
 
 header h2 {
-  margin: 0;
+  color: #3b82f6;
 }
 
 nav a {
-  color: #ccc;
   margin-left: 20px;
+  color: #ccc;
   text-decoration: none;
+  transition: 0.3s;
 }
 
+nav a:hover {
+  color: #3b82f6;
+}
+
+/* HERO */
 .hero {
   text-align: center;
-  padding: 80px 20px;
+  padding: 100px 20px;
 }
 
 .hero h1 {
-  font-size: 40px;
+  font-size: 42px;
+  margin-bottom: 10px;
 }
 
 .hero p {
   color: #94a3b8;
+  margin-bottom: 20px;
 }
 
 .btn {
   background: #3b82f6;
   padding: 12px 25px;
-  border-radius: 5px;
+  border-radius: 6px;
   text-decoration: none;
   color: white;
+  margin: 5px;
+  display: inline-block;
+  transition: 0.3s;
 }
 
+.btn:hover {
+  background: #2563eb;
+}
+
+/* SECTION */
 section {
   padding: 60px 50px;
 }
 
 h2 {
   margin-bottom: 20px;
+  color: #3b82f6;
 }
 
+/* CARDS */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
   gap: 20px;
 }
 
 .card {
-  background: #1e293b;
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
   padding: 20px;
-  border-radius: 10px;
+  backdrop-filter: blur(8px);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .card h3 {
-  margin-top: 0;
+  margin-bottom: 10px;
 }
 
+/* LIST */
+ul {
+  line-height: 1.8;
+}
+
+/* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
@@ -89,101 +128,114 @@ footer {
 <body>
 
 <header>
-  <h2>Your Name</h2>
+  <h2>Piyush Yadav</h2>
   <nav>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
+    <a href="#architecture">Architecture</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
 <section class="hero">
   <h1>System Administrator & Cloud Architect</h1>
-  <p>AWS | Linux | Apache | Cloud Infrastructure | Security</p>
-  <br>
-  <a class="btn" href="#projects">View My Work</a>
+  <p>AWS | Linux | Apache | VPC | Route 53 | Automation | Security</p>
+  <a href="#projects" class="btn">View Work</a>
+  <a href="Piyush.pdf" class="btn" download>Download Resume</a>
 </section>
 
 <section id="about">
   <h2>About Me</h2>
   <p>
-    I am a System Administrator and Cloud Architect with hands-on experience 
-    in deploying and managing production environments on AWS. I specialize in 
-    EC2, VPC, Route 53, Linux servers, Apache configuration, and SSL security 
-    using Let’s Encrypt.
+    System Administrator & Cloud Architect with 2.5+ years of experience in AWS cloud infrastructure, 
+    Linux server management, and large-scale hosting. Experienced in EC2, VPC, Load Balancers, 
+    DNS, SSL, and automation. Skilled in handling production environments with high availability, 
+    security, and performance optimization.
   </p>
 </section>
 
 <section id="projects">
-  <h2>Cloud Projects</h2>
+  <h2>Cloud & Server Projects</h2>
 
   <div class="cards">
 
     <div class="card">
-      <h3>RKSK</h3>
-      <p>Deployed on AWS EC2 with Apache, SSL, and DNS configuration.</p>
-      <a href="http://rksk.in" target="_blank">Visit</a>
+      <h3>AWS Scalable Infrastructure</h3>
+      <p>EC2, VPC, Load Balancer, Auto Scaling setup ensuring high availability.</p>
     </div>
 
     <div class="card">
-      <h3>QCC UAE</h3>
-      <p>Cloud hosting with DNS routing and server optimization.</p>
-      <a href="http://qcc.uacuae.com" target="_blank">Visit</a>
+      <h3>50+ Website Backup Automation</h3>
+      <p>Automated backups using rsync + cron with disaster recovery.</p>
     </div>
 
     <div class="card">
-      <h3>Meghdoot</h3>
-      <p>Linux server deployment with SSL and monitoring.</p>
-      <a href="http://meghdoot.info" target="_blank">Visit</a>
+      <h3>Reverse Proxy Architecture</h3>
+      <p>Connected 8 servers with single IP using reverse proxy routing.</p>
     </div>
 
     <div class="card">
-      <h3>Azad Foundation MIS</h3>
-      <p>Hosted MIS system with database and backup configuration.</p>
-      <a href="http://mis.azadfoundation.com" target="_blank">Visit</a>
+      <h3>Cloudflare Security</h3>
+      <p>DNS protection, SSL, DDoS mitigation, and global traffic optimization.</p>
     </div>
 
     <div class="card">
-      <h3>Drive Secure MIS</h3>
-      <p>Secure system deployment with access control.</p>
-      <a href="http://mis.drivesecuresolutions.in" target="_blank">Visit</a>
+      <h3>Large Scale Migration</h3>
+      <p>Migrated websites across AWS, GoDaddy, Hostinger with zero downtime.</p>
     </div>
 
     <div class="card">
-      <h3>VOIS Planet</h3>
-      <p>Performance optimized hosting and uptime monitoring.</p>
-      <a href="http://voisplanet.com" target="_blank">Visit</a>
-    </div>
-
-    <div class="card">
-      <h3>Ekta Foundation</h3>
-      <p>End-to-end deployment with domain + SSL setup.</p>
-      <a href="http://ektafoundation.org" target="_blank">Visit</a>
+      <h3>SSL & Apache Hardening</h3>
+      <p>Configured HTTPS using Certbot and optimized Apache security.</p>
     </div>
 
   </div>
 </section>
 
+<section id="architecture">
+  <h2>Architecture Flow</h2>
+  <p>
+    User → DNS (Route 53 / Cloudflare) → Load Balancer → EC2 (Apache) → Database
+  </p>
+  <ul>
+    <li>DNS resolves domain and routes traffic</li>
+    <li>Load balancer distributes requests</li>
+    <li>EC2 instances handle application</li>
+    <li>Automated backups ensure data safety</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Achievements</h2>
+  <ul>
+    <li>Managed 50+ production websites</li>
+    <li>Handled 70+ systems</li>
+    <li>Maintained high uptime & performance</li>
+    <li>Implemented secure cloud infrastructure</li>
+  </ul>
+</section>
+
 <section>
   <h2>Skills</h2>
-  <p>
-    AWS (EC2, VPC, Route 53) <br>
-    Linux Administration <br>
-    Apache Web Server <br>
-    DNS & Networking <br>
-    SSL (Certbot / Let’s Encrypt) <br>
-    Backup & Security
-  </p>
+  <ul>
+    <li>AWS (EC2, VPC, Route 53, S3)</li>
+    <li>Linux Administration (Ubuntu, RHEL)</li>
+    <li>Apache Web Server</li>
+    <li>DNS & Networking</li>
+    <li>SSL (Certbot / Let's Encrypt)</li>
+    <li>Automation (Bash, rsync, Cron)</li>
+  </ul>
 </section>
 
 <section id="contact">
   <h2>Contact</h2>
-  <p>Email: your@email.com</p>
-  <p>Phone: +91-XXXXXXXXXX</p>
+  <p>Email: piyushyadav2497@gmail.com</p>
+  <p>Phone: 9990349960</p>
+  <p>Location: Rohini, Delhi</p>
 </section>
 
 <footer>
-  © 2026 Your Name | Cloud Portfolio
+  © 2026 Piyush Yadav | Cloud Architect Portfolio
 </footer>
 
 </body>
